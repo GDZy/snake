@@ -3,3 +3,9 @@ D:\Git\SnakeMy\SnakeM\SnakeM\bin\Debug\SnakeM.exe
 D:\Git\SnakeMy\SnakeM\SnakeM\bin\Debug\SnakeM.pdb
 D:\Git\SnakeMy\SnakeM\SnakeM\obj\Debug\SnakeM.exe
 D:\Git\SnakeMy\SnakeM\SnakeM\obj\Debug\SnakeM.pdb
+E:\dOOP_snake\SnakeM\SnakeM\bin\Debug\SnakeM.exe.config
+E:\dOOP_snake\SnakeM\SnakeM\obj\Debug\SnakeM.exe
+E:\dOOP_snake\SnakeM\SnakeM\obj\Debug\SnakeM.pdb
+E:\dOOP_snake\SnakeM\SnakeM\bin\Debug\SnakeM.exe
+E:\dOOP_snake\SnakeM\SnakeM\bin\Debug\SnakeM.pdb
+E:\dOOP_snake\SnakeM\SnakeM\obj\Debug\SnakeM.csprojResolveAssemblyReference.cache
