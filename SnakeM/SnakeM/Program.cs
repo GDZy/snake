@@ -14,19 +14,19 @@ namespace SnakeM
             int y1 = 3;
             char sym1 = '*';
 
-            Draw(x1, y1, sym1);
+            Drow(x1, y1, sym1);
 
             int x2 = 5;
             int y2 = 10;
             char sym2 = '#';
 
-            Draw(x2, y2, sym2);
+            Drow(x2, y2, sym2);
 
             Console.ReadLine();
 
        }
 
-        static void Draw(int x, int y, char sym)
+        static void Drow(int x, int y, char sym)
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
