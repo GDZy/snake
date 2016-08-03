@@ -10,27 +10,22 @@ namespace SnakeM
     {
         static void Main(string[] args)
         {
-            int x1 = 6;
-            int y1 = 3;
-            char sym1 = '*';
+            
+            Point p1 = new Point();
+            p1.x = 1;
+            p1.y = 4;
+            p1.sym = '%';
+            p1.Draw();
 
-            Drow(x1, y1, sym1);
-
-            int x2 = 5;
-            int y2 = 10;
-            char sym2 = '#';
-
-
-            Drow(x2, y2, sym2);
+            Point p2 = new Point();
+            p2.x = 4;
+            p2.y = 6;
+            p2.sym = 'b';
+            p2.Draw();
 
             Console.ReadLine();
-
        }
-
-        static void Drow(int x, int y, char sym)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
-        }
+               
+      
     }
 }
