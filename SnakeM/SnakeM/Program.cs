@@ -20,6 +20,7 @@ namespace SnakeM
             int y2 = 10;
             char sym2 = '#';
 
+
             Drow(x2, y2, sym2);
 
             Console.ReadLine();
