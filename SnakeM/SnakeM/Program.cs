@@ -11,11 +11,17 @@ namespace SnakeM
         static void Main(string[] args)
         {
             
-            Point p1 = new Point(1, 4, '*');           
+            Point p1 = new Point(3, 4, '*');           
             p1.Draw(); 
 
-            Point p2 = new Point(4,6,'#');           
+            Point p2 = new Point(3,6,'#');           
             p2.Draw();
+
+            HorizontalLine hLine = new HorizontalLine(4, 9, 8, '+');
+            hLine.Draw();
+
+            VerticalLine vLine = new VerticalLine(4, 3, 8, '-');
+            vLine.Draw();
 
             Console.ReadLine();
        }
