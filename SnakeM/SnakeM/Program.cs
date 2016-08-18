@@ -26,7 +26,7 @@ namespace SnakeM
 
             // Создание змейки
             Point p = new Point(3, 5, '*');
-            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            Snake snake = new Snake(p, 5, Direction.DOWN);
             snake.Draw();
 
             Console.ReadLine();
