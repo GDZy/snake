@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace SnakeM
 {
-    class Figure
+    class Snake : Figure
     {
-        List<Point> pList;
-
-        public void Draw()
+        public Snake (Point p, int lenght, Direction directon)
         {
-            foreach (Point p in pList)
+            for (int i = 0; i < lenght; i++)
             {
-                p.Draw();
+                Point p = new Point(p);
+
             }
         }
     }
