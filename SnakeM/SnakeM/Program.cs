@@ -13,8 +13,6 @@ namespace SnakeM
             Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80, 25);
        
-
-
             // Отрисовка рамочки
             HorizontalLine topLine = new HorizontalLine(0, 78, 0, '+');
             HorizontalLine bottomLine = new HorizontalLine(0, 78, 24, '+');
@@ -23,7 +21,13 @@ namespace SnakeM
             topLine.Draw();
             bottomLine.Draw();
             leftLine.Draw();
-            rightLine.Draw();            
+            rightLine.Draw();
+
+
+            // Создание змейки
+            Point p = new Point(3, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
 
             Console.ReadLine();
        }

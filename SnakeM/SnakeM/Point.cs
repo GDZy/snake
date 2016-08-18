@@ -16,6 +16,13 @@ namespace SnakeM
         {
         }
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
         public Point(int x, int y, char sym)
         {
             this.x = x;
@@ -30,5 +37,19 @@ namespace SnakeM
             Console.Write(sym);
         }
 
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.DOWN) y = y + offset;
+            else if (direction == Direction.LEFT) x = x - offset;
+            else if (direction == Direction.RIGHT) x = x + offset;
+            else if (direction == Direction.UP) y = y + offset;
+
+        }
+
+    public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
+        }
+        
     }
 }
