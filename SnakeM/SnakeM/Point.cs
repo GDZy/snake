@@ -46,7 +46,13 @@ namespace SnakeM
 
         }
 
-    public override string ToString()
+        public void Clear()
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(' ');
+        }
+
+        public override string ToString()
         {
             return x + ", " + y + ", " + sym;
         }
