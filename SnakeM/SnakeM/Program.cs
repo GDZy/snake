@@ -30,7 +30,12 @@ namespace SnakeM
             // Создание змейки
             Point p = new Point(3, 5, '*');
             Snake snake = new Snake(p, 5, Direction.RIGHT);
-            snake.Draw(); 
+            snake.Draw();
+
+            // Создание еды
+            FoodCreater food = new FoodCreater(78, 24, '$');
+            Point foodPoint = food.CreateFood();
+            foodPoint.Draw();
 
             while (true)
             {
