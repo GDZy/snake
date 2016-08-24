@@ -42,7 +42,7 @@ namespace SnakeM
             if (direction == Direction.DOWN) y = y + offset;
             else if (direction == Direction.LEFT) x = x - offset;
             else if (direction == Direction.RIGHT) x = x + offset;
-            else if (direction == Direction.UP) y = y + offset;
+            else if (direction == Direction.UP) y = y - offset;
 
         }
 
@@ -51,6 +51,8 @@ namespace SnakeM
             Console.SetCursorPosition(x, y);
             Console.Write(' ');
         }
+
+       
 
         public override string ToString()
         {

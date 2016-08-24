@@ -9,6 +9,8 @@ namespace SnakeM
 {
     class Program
     {
+        private static object console;
+
         static void Main(string[] args)
         {
             Console.SetWindowSize(80, 25);
@@ -28,31 +30,18 @@ namespace SnakeM
             // Создание змейки
             Point p = new Point(3, 5, '*');
             Snake snake = new Snake(p, 5, Direction.RIGHT);
-            snake.Draw();
+            snake.Draw(); 
 
-            snake.Move();
-            Thread.Sleep(300);
-
-            snake.Move();
-            Thread.Sleep(300);
-
-            snake.Move();
-            Thread.Sleep(300);
-
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-
-            Console.ReadLine();
-       }
-               
-      
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
+                Thread.Sleep(100);
+                snake.Move();
+            }            
+       }      
     }
 }
