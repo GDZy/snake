@@ -8,6 +8,8 @@ namespace SnakeM
         int mapHight;
         char sym;
 
+        Random rnd = new Random();
+
         public FoodCreater (int mapWidth, int mapHight, char sym)
         {
             this.mapWidth = mapWidth;
@@ -17,12 +19,9 @@ namespace SnakeM
 
         public Point CreateFood()
         {
-            Random rnd = new Random();
-
             int x = rnd.Next(2, mapWidth - 2);
-            int y = rnd.Next(2, mapHight - 2);
-            Point food = new Point(x, y, sym);
-            return food;
+            int y = rnd.Next(2, mapHight - 2);            
+            return new Point(x, y, sym);
 
         }
     }

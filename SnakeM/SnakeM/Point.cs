@@ -52,12 +52,17 @@ namespace SnakeM
             Console.Write(' ');
         }
 
-       
+        internal bool IsHit(Point p)
+        {
+            return x == p.x && y == p.y;
+                    
+        }
 
         public override string ToString()
         {
             return x + ", " + y + ", " + sym;
         }
+
         
     }
 }

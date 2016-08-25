@@ -28,24 +28,38 @@ namespace SnakeM
 
 
             // Создание змейки
-            Point p = new Point(3, 5, '*');
-            Snake snake = new Snake(p, 5, Direction.RIGHT);
+            Point p = new Point(20, 5, '*');
+            Snake snake = new Snake(p, 5, Direction.LEFT);
             snake.Draw();
 
             // Создание еды
-            FoodCreater food = new FoodCreater(78, 24, '$');
-            Point foodPoint = food.CreateFood();
-            foodPoint.Draw();
+            FoodCreater foodCreater = new FoodCreater(78, 24, '$');
+            Point food = foodCreater.CreateFood();
+            food.Draw();
+            
 
             while (true)
             {
+                if (snake.Eat(food))
+                {
+                    food = foodCreater.CreateFood();
+                    food.Draw();
+                }
+                else
+                {
+                    snake.Move();
+                }
+
+                Thread.Sleep(100);
+
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
                 }
-                Thread.Sleep(100);
-                snake.Move();
+
+                
+
             }            
        }      
     }
