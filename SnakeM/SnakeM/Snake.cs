@@ -43,6 +43,20 @@ namespace SnakeM
             return nextPoint;            
         }
 
+        internal bool HitTail()
+        {
+            Point head = GetNextHead();
+            foreach (var p in pList)
+            {
+                if (p.IsHit(head))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        
         public void HandleKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow)

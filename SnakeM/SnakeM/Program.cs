@@ -9,24 +9,15 @@ namespace SnakeM
 {
     class Program
     {
-        private static object console;
 
         static void Main(string[] args)
         {
             Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80, 25);
-       
-            // Отрисовка рамочки
-            HorizontalLine topLine = new HorizontalLine(0, 78, 0, '+');
-            HorizontalLine bottomLine = new HorizontalLine(0, 78, 24, '+');
-            VerticalLine leftLine = new VerticalLine(0, 0, 24, '+');
-            VerticalLine rightLine = new VerticalLine(78, 0, 24, '+');
-            topLine.Draw();
-            bottomLine.Draw();
-            leftLine.Draw();
-            rightLine.Draw();
 
-
+            Walls walls = new Walls(78, 24, '+');
+            walls.Draw();
+            
             // Создание змейки
             Point p = new Point(20, 5, '*');
             Snake snake = new Snake(p, 5, Direction.LEFT);
@@ -40,6 +31,11 @@ namespace SnakeM
 
             while (true)
             {
+                // проверка на пересечение
+                if (walls.IsHit(snake) || snake.HitTail())
+                {
+                    break;
+                }
                 if (snake.Eat(food))
                 {
                     food = foodCreater.CreateFood();
@@ -57,10 +53,10 @@ namespace SnakeM
                     ConsoleKeyInfo key = Console.ReadKey();
                     snake.HandleKey(key.Key);
                 }
+            }
+            OutputScreen outScr = new OutputScreen("DiG");
 
-                
-
-            }            
+            Console.ReadLine();        
        }      
     }
 }
